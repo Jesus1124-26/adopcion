@@ -58,3 +58,10 @@ Bonificación (opcional):
 - Proyecto creado con Spring Initializr desde VS Code (Java 21, dependencia Vaadin, Group Id `com.example`, Artifact Id `adopcion`).
 - Primera vista (`views/MainView.java`) en la ruta de inicio, con el título y la descripción del sistema, para comprobar que la aplicación arranca.
 - README inicial con la descripción del proyecto, la lista de requisitos y las instrucciones para ejecutarlo.
+
+### 25 de octubre de 2026 — Capa de datos
+
+- Clases del modelo en `model/`: `Mascota`, `Adoptante`, `Solicitud`, `RegistroMedico` y `Donacion`, con sus campos, sus constructores y los valores permitidos de cada dato (por ejemplo, los estados de una mascota).
+- Clase `util/ArchivoUtil` que lee y guarda los cinco archivos `.txt` en `src/main/resources/data/`: separa cada línea con `split("\\|")` para armar los objetos y une los campos con `|` para guardarlos. Crea datos de ejemplo la primera vez que corre la aplicación y salta las líneas dañadas con `try/catch` sin que la aplicación se caiga.
+- Regla de atención urgente: una mascota necesita atención urgente cuando su estado de salud es *Urgente* (los estados posibles son *Sano*, *En tratamiento* y *Urgente*). La regla está en el método `Mascota.necesitaAtencionUrgente()`.
+- La vista de inicio muestra un resumen de los datos cargados y cuántas mascotas necesitan atención urgente, para comprobar que la lectura de los archivos funciona.

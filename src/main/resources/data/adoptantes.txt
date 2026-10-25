@@ -1,0 +1,4 @@
+1|1012345678|Laura Martínez|3001234567|laura.martinez@correo.com|Apartamento|No|Sí|Gato|Pequeño
+2|52987654|Carlos Ruiz|3109876543|carlos.ruiz@correo.com|Casa con patio|Sí|Sí|Perro|Grande
+3|1098765432|Ana Gómez|3205557788|ana.gomez@correo.com|Casa sin patio|No|No|Perro|Mediano
+4|80123456|Pedro Salas|3152223344|pedro.salas@correo.com|Apartamento|Sí|No|Cualquiera|Cualquiera

@@ -1,0 +1,6 @@
+1|4|2|2026-09-02|Aprobada|Casa con patio y experiencia con perros grandes|2026-09-10
+2|4|3|2026-09-05|Rechazada|Rechazada automáticamente: la mascota fue adoptada|2026-09-10
+3|7|1|2026-10-01|Aprobada|Tiene experiencia cuidando gatos|2026-10-08
+4|1|4|2026-10-15|Rechazada|Vive en apartamento y la mascota necesita espacio|2026-10-17
+5|2|3|2026-10-18|Pendiente||
+6|2|4|2026-10-20|Pendiente||

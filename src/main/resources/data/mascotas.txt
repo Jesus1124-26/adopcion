@@ -1,0 +1,8 @@
+1|Luna|Perro|Golden Retriever|3|Hembra|Grande|Sano|https://images.dog.ceo/breeds/retriever-golden/n02099601_6194.jpg|Disponible
+2|Rocky|Perro|Beagle|5|Macho|Mediano|En tratamiento|https://images.dog.ceo/breeds/beagle/n02088364_5282.jpg|En proceso
+3|Toby|Perro|Basset Hound|8|Macho|Mediano|Urgente|https://images.dog.ceo/breeds/hound-basset/n02088238_9446.jpg|Disponible
+4|Nieve|Perro|Samoyedo|2|Hembra|Grande|Sano|https://images.dog.ceo/breeds/samoyed/n02111889_15038.jpg|Adoptada
+5|Chispa|Perro|Fox Terrier|1|Hembra|Pequeño|Sano|https://images.dog.ceo/breeds/terrier-fox/n02095314_2196.jpg|Disponible
+6|Michi|Gato|Criollo|2|Macho|Pequeño|Sano|https://cdn2.thecatapi.com/images/jj.jpg|Disponible
+7|Pelusa|Gato|Criollo|4|Hembra|Pequeño|Sano|https://cdn2.thecatapi.com/images/be0.jpg|Adoptada
+8|Simón|Gato|Criollo|1|Macho|Pequeño|Urgente|https://cdn2.thecatapi.com/images/bin.jpg|Disponible

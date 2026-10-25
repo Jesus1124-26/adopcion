@@ -1,0 +1,5 @@
+1|Fundación Huellitas|Dinero|500000|2026-09-05|Donación mensual
+2|Anónimo|Alimento|120000|2026-09-18|Dos bultos de concentrado para perro
+3|María López|Dinero|50000|2026-10-02|
+4|Veterinaria San Roque|Medicamentos|200000|2026-10-10|Antiparasitarios y vacunas
+5|Anónimo|Dinero|30000|2026-10-20|

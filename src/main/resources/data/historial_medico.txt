@@ -1,0 +1,8 @@
+1|1|Vacuna|2026-03-10|Rabia
+2|1|Consulta|2026-08-20|Control general, sin novedades
+3|2|Consulta|2026-10-12|Otitis, tratamiento con gotas por 10 días
+4|3|Consulta|2026-10-22|Cojera en pata trasera, requiere radiografía urgente
+5|3|Vacuna|2025-05-01|Múltiple (parvovirus y moquillo)
+6|6|Vacuna|2026-09-15|Triple felina
+7|7|Consulta|2026-09-28|Infección respiratoria leve, ya recuperada
+8|8|Consulta|2026-10-21|Desnutrición grave, rescatado de la calle

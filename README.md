@@ -65,3 +65,11 @@ Bonificación (opcional):
 - Clase `util/ArchivoUtil` que lee y guarda los cinco archivos `.txt` en `src/main/resources/data/`: separa cada línea con `split("\\|")` para armar los objetos y une los campos con `|` para guardarlos. Crea datos de ejemplo la primera vez que corre la aplicación y salta las líneas dañadas con `try/catch` sin que la aplicación se caiga.
 - Regla de atención urgente: una mascota necesita atención urgente cuando su estado de salud es *Urgente* (los estados posibles son *Sano*, *En tratamiento* y *Urgente*). La regla está en el método `Mascota.necesitaAtencionUrgente()`.
 - La vista de inicio muestra un resumen de los datos cargados y cuántas mascotas necesitan atención urgente, para comprobar que la lectura de los archivos funciona.
+
+
+### 27 de octubre de 2026 — Menú y catálogo de mascotas
+
+- Menú lateral compartido por todas las vistas (`views/MainLayout.java`), hecho con `AppLayout`, `DrawerToggle` y `SideNav`. En el celular el menú se esconde y se abre con el botón de las tres rayas.
+- Catálogo de mascotas (`views/MascotasView.java`, en `/mascotas`): tabla `Grid` con nombre, especie, raza, edad, sexo, salud y estado; búsqueda en tiempo real por nombre o raza, y filtros por especie y por estado con `ComboBox`.
+- La vista de inicio ahora usa el menú y tiene un botón para ir al catálogo.
+- Investigado en la documentación oficial de Vaadin: App Layout, Side Navigation, Grid y `ValueChangeMode.EAGER` (para que la búsqueda filtre con cada letra escrita).

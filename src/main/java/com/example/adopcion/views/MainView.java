@@ -2,7 +2,9 @@ package com.example.adopcion.views;
 
 import com.example.adopcion.model.Mascota;
 import com.example.adopcion.util.ArchivoUtil;
-import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.UI;
+import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -12,14 +14,11 @@ import com.vaadin.flow.router.Route;
 import java.util.List;
 
 /**
- * Vista de inicio del proyecto.
- *
- * Por ahora muestra un resumen de los datos leídos desde los archivos .txt,
- * para comprobar que la capa de datos funciona. Más adelante esta vista se
- * convierte en el catálogo de mascotas (Grid con búsqueda, filtros, fotos y estados).
+ * Vista de inicio: un resumen de los datos del refugio y la alerta de las
+ * mascotas que necesitan atención urgente.
  */
-@Route("") // "" = página de inicio, la que se ve en http://localhost:8080
-@PageTitle("Refugio - Adopción de mascotas") // texto de la pestaña del navegador
+@Route(value = "", layout = MainLayout.class) // "" = página de inicio; layout = usa el menú de MainLayout
+@PageTitle("Inicio - Refugio")
 public class MainView extends VerticalLayout {
 
     public MainView() {
@@ -28,10 +27,10 @@ public class MainView extends VerticalLayout {
         setPadding(true);
         setSpacing(true);
 
-        H1 titulo = new H1("Refugio de mascotas");
+        H2 titulo = new H2("Bienvenido al refugio");
         Paragraph descripcion = new Paragraph(
                 "Sistema para gestionar mascotas, adoptantes, solicitudes de adopción, "
-                + "historial médico y donaciones. Proyecto en construcción.");
+                + "historial médico y donaciones.");
 
         // Leer los datos (la primera vez, ArchivoUtil crea los .txt con datos de ejemplo)
         List<Mascota> mascotas = ArchivoUtil.leerMascotas();
@@ -57,7 +56,7 @@ public class MainView extends VerticalLayout {
             }
         }
 
-        H3 subtitulo = new H3("Datos cargados");
+        H3 subtitulo = new H3("Resumen");
         Paragraph resumenMascotas = new Paragraph(
                 "Mascotas: " + mascotas.size() + " (" + disponibles + " disponibles)");
         Paragraph resumenAdoptantes = new Paragraph("Adoptantes: " + totalAdoptantes);
@@ -69,8 +68,12 @@ public class MainView extends VerticalLayout {
             resumenUrgentes.setText("Atención urgente: " + urgentes + " (" + nombresUrgentes + ")");
         }
 
+        // Botón para ir al catálogo (navigate, como en la Sesión 11)
+        Button verCatalogo = new Button("Ver catálogo de mascotas",
+                e -> UI.getCurrent().navigate(MascotasView.class));
+
         // Sin add(...) los componentes existen en Java pero no aparecen en pantalla
         add(titulo, descripcion, subtitulo, resumenMascotas, resumenAdoptantes,
-                resumenSolicitudes, resumenHistorial, resumenDonaciones, resumenUrgentes);
+                resumenSolicitudes, resumenHistorial, resumenDonaciones, resumenUrgentes, verCatalogo);
     }
 }

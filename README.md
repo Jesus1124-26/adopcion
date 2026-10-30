@@ -14,7 +14,7 @@ Un refugio de animales recibe solicitudes de adopción por redes sociales y pier
 
 Requisitos propios del proyecto:
 
-- [ ] Mascotas con nombre, especie, raza, edad, sexo, estado de salud, foto (por URL) y estado (disponible, en proceso o adoptada)
+- [x] Mascotas con nombre, especie, raza, edad, sexo, estado de salud, foto (por URL) y estado (disponible, en proceso o adoptada)
 - [ ] Adoptantes con sus datos, tipo de vivienda, si tienen otras mascotas y sus preferencias
 - [ ] Solicitudes pendientes, aprobadas o rechazadas, con observación. Al aprobar una, la mascota queda adoptada y las demás solicitudes pendientes por ella se rechazan solas
 - [ ] Historial médico básico de cada mascota (vacunas y consultas) y alerta de las mascotas que necesitan atención urgente
@@ -28,12 +28,12 @@ Componentes investigados:
 
 Núcleo común:
 
-- [ ] CRUD completo (crear, ver, modificar y eliminar)
-- [ ] Grid con búsqueda en tiempo real y al menos un filtro
+- [x] CRUD completo (crear, ver, modificar y eliminar)
+- [x] Grid con búsqueda en tiempo real y al menos un filtro
 - [ ] Al menos 3 vistas con `@Route`, navegables desde el menú de un `AppLayout`
-- [ ] Validación de formularios con mensajes en `Notification`
-- [ ] Confirmación antes de borrar
-- [ ] Datos en archivos `.txt` que sobreviven a un reinicio, con manejo de errores (try/catch)
+- [x] Validación de formularios con mensajes en `Notification`
+- [x] Confirmación antes de borrar
+- [x] Datos en archivos `.txt` que sobreviven a un reinicio, con manejo de errores (try/catch)
 - [ ] Funciona en la pantalla del celular
 
 Bonificación (opcional):
@@ -73,3 +73,12 @@ Bonificación (opcional):
 - Catálogo de mascotas (`views/MascotasView.java`, en `/mascotas`): tabla `Grid` con nombre, especie, raza, edad, sexo, salud y estado; búsqueda en tiempo real por nombre o raza, y filtros por especie y por estado con `ComboBox`.
 - La vista de inicio ahora usa el menú y tiene un botón para ir al catálogo.
 - Investigado en la documentación oficial de Vaadin: App Layout, Side Navigation, Grid y `ValueChangeMode.EAGER` (para que la búsqueda filtre con cada letra escrita).
+
+### 30 de octubre de 2026 — Fotos, estados de colores y CRUD de mascotas
+
+- El catálogo muestra la foto de cada mascota con `Image` y el estado de salud y de adopción con `Badge` de colores: verde (Sano, Disponible), amarillo (En tratamiento, En proceso), rojo (Urgente) y gris (Adoptada).
+- CRUD completo de mascotas en `views/MascotasView.java`: botón **Nueva mascota** y botones **Editar** y **Eliminar** en cada fila. El formulario se abre en un `Dialog` y reutiliza los mismos campos para crear y para editar.
+- Validación antes de guardar, con un mensaje en `Notification` para cada error: campos obligatorios, edad numérica entre 0 y 30, foto que empiece por `http` y prohibido el carácter `|` (porque separa los campos en el `.txt`).
+- Eliminar siempre pasa por un diálogo de confirmación. Al eliminar una mascota también se borran su historial médico y sus solicitudes, para que no queden datos sueltos.
+- El id de una mascota nueva es el mayor id que exista más 1.
+- Investigado en la documentación oficial de Vaadin: `Image`, `Badge` (con `BadgeVariant`) y `addComponentColumn` del `Grid`. También `ArrayList`, porque los arreglos tienen tamaño fijo y con el CRUD la cantidad de mascotas cambia.
